@@ -9,8 +9,5 @@ class Bid(val amount: Int, val bidder: String)
  
 fun auctionPrice(bid: Bid?, minimumPrice: Int): Int {
    // Fill in the code.
-   return when {
-       bid != null -> bid.amount
-       else -> minimumPrice
-   }
+   return bid?.amount ?: minimumPrice
 }
